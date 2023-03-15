@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import NavDropdown from "./components/NavDropdown";
-import Post from "./components/Post";
+import New from "./components/New";
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
 
     <div
     className="flex items-center justify-center">
-      <Post />
+      <New />
     </div>
     </>
   );
