@@ -1,25 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NavDropdown = ({isOpen, toggle}) => {
   return (
     <>
     <div
     className={
-      isOpen ? 'grid grid-rows-3 sticky top-16 z-10 text-center items-center justify-center bg-white' : 'hidden' }
+      isOpen ? 'grid grid-rows-3 sticky top-16 z-10 text-center items-center justify-center' : 'hidden' }
     
     onClick={toggle}>
 
-          <a
-          className='p-4' href='/'>
-          Home</a>
+          <Link to='/'>
+            <p
+            className='p-4' href='/'
+            >Home</p>
+          </Link>
 
           <a
           className='p-4' href='/ex'>
           Explore Topics</a>
-          
-          <a
-          className='p-4' href='/contact'>
-          Contact</a>
+
           
           <div
           className='flex items-center justify-center my-6'>

@@ -1,26 +1,34 @@
 import React from "react";
-import { useState } from "react";
-import Navbar from "./components/Navbar";
-import NavDropdown from "./components/NavDropdown";
-import Post from "./components/Post";
+import { FaAngleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function App() {
-
-  const [isOpen, setOpen ] = useState(true)
-
-    const toggle = () => {
-        setOpen(!isOpen)
-    }
-
   return (
     <>
-    <Navbar toggle={toggle} />
-    <NavDropdown isOpen={!isOpen} toggle={toggle} />
+    <div 
+    className="hero min-h-screen bg-base-200">
+      <div 
+      className="hero-content text-center">
+        
+        <div 
+        className="max-w-md">
+          <h1 
+          className="text-5xl font-bold leading-tight"
+          >A comfortable place to learn about the brain</h1>
+          <p 
+          className="py-6"
+          >Minimal ads, no paywalls, no user accounts</p>
 
-    <div
-    className="flex items-center justify-center">
-      <Post />
+          <Link to="/explore">
+            <button 
+            className="btn btn-primary"
+            ><FaAngleRight /> Explore topics </button>
+          </Link>
+        </div>
+
+      </div>
     </div>
+
     </>
   );
 }
