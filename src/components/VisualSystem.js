@@ -9,7 +9,7 @@ const VisualSystem = () => {
     className='flex items-center justify-center'>
         
         <div
-        className='max-w-3xl p-4'>
+        className='max-w-3xl'>
             <div
             className='flex-col'>
                 <div
