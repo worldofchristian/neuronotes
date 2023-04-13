@@ -14,18 +14,18 @@ const Olfaction = () => {
             className='flex-col'>
                 <div
                 className='flex items-center text-center justify-center mt-12 gap-2'>
-                    <Link to='/explore'>
+                    <Link to='/'>
                         <p
                         className='text-base font-normal text-center underline tracking-wide'
-                        >Perception</p>
+                        >Home</p>
                     </Link>
 
                     <FaAngleRight />
 
-                    <Link to='explore'>
+                    <Link to='/explore'>
                     <h2
                     className='text-base font-normal underline tracking-wide'
-                    >Visual System</h2>
+                    >Perception</h2>
                     </Link>
                 </div>
 
@@ -57,6 +57,16 @@ const Olfaction = () => {
 
             <p
             className='text-base text-left justify-start items-start mt-6 mx-4'
+            >Odorants can stimulate the somatosensory (tactile) system. This is because the neurons in question are polymodal, 
+            meaning they can be activated by a wider variety of stimuli. This is how things like menthol can give the sensation 
+            of coolness. </p>
+
+            <h2
+            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+            >Issues with Olfaction</h2>
+
+            <p
+            className='text-base text-left justify-start items-start mt-6 mx-4'
             >An inability to perceive smell is known as anosmia. It’s most often caused by head trauma or an illness effecting 
             the sinuses. However, anything that severs the connections between the brain and the olfactory sensory neurons will 
             result in a diminished ability to smell. Some people have genetic differences in their olfactory system that results 
@@ -64,12 +74,31 @@ const Olfaction = () => {
 
             <p
             className='text-base text-left justify-start items-start mt-6 mx-4'
+            >Additionally, our sense of smell towards any particular scent is diminished when we spend a lot of time in its presence. 
+            This is a process called receptor adaptation. Familiarity with some scents can sometimes cause adaptation in other scents as well, 
+            a process called cross-adaptation. This long term process of reduced ability to detect scents as a result of regular exposure, is 
+            known as cognitive habituation.</p>
+
+            <h2
+            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+            >Taste</h2>
+
+            <p
+            className='text-base text-left justify-start items-start mt-6 mx-4'
             >There are two primary ways we sense odorants in the air. First is called orthonasal olfaction. This is the typical 
             manner in which we bring air into our nostrils and smell whatever happens to be in the air. The other, is called 
             retronasal olfaction. This is when odorents make their way to the olfactory epithelium through the mouth, and 
             typically occurs when we are eating.</p>
+
+            <p
+            className='text-base text-left justify-start items-start mt-6 mx-4'
+            >The perception of the stimuli can vary dramatically depending on how it was sensed. Smells can be pleasant when experienced 
+            through the nose, but revolting when experienced through the mouth. One such example is freshly cut grass. The scent is commonly 
+            thought to be a good one, but not in the way that you would want it in your mouth. However, the smell of a barbecue could.</p>
+
             </div>
         </div>
+        
     </div>
     </>
   )
