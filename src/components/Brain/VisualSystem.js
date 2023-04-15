@@ -9,7 +9,7 @@ const VisualSystem = () => {
     className='flex items-center justify-center'>
         
         <div
-        className='max-w-3xl'>
+        className='max-w-4xl mx-auto'>
             <div
             className='flex-col'>
                 <div
@@ -18,6 +18,14 @@ const VisualSystem = () => {
                         <p
                         className='text-base font-normal text-center underline tracking-wide'
                         >Home</p>
+                    </Link>
+
+                    <FaAngleRight />
+
+                    <Link to='/explore'>
+                        <h2
+                        className='text-base font-normal underline tracking-wide'
+                        >Brain</h2>
                     </Link>
 
                     <FaAngleRight />

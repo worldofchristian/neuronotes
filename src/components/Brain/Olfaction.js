@@ -9,11 +9,11 @@ const Olfaction = () => {
     className='flex items-center justify-center'>
         
         <div
-        className='max-w-3xl'>
+        className='max-w-4xl mx-auto'>
             <div
             className='flex-col'>
                 <div
-                className='flex items-center text-center justify-center mt-12 gap-2'>
+                className='flex items-center text-center justify-center mt-6 gap-2'>
                     <Link to='/'>
                         <p
                         className='text-base font-normal text-center underline tracking-wide'
@@ -23,9 +23,17 @@ const Olfaction = () => {
                     <FaAngleRight />
 
                     <Link to='/explore'>
-                    <h2
-                    className='text-base font-normal underline tracking-wide'
-                    >Perception</h2>
+                        <h2
+                        className='text-base font-normal underline tracking-wide'
+                        >Brain</h2>
+                    </Link>
+
+                    <FaAngleRight />
+
+                    <Link to='/explore'>
+                        <h2
+                        className='text-base font-normal underline tracking-wide'
+                        >Perception</h2>
                     </Link>
                 </div>
 
