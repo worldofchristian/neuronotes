@@ -111,7 +111,7 @@ const initialEdges = [
   { id: 'e12-13', source: 'ffa', target: 'ppa', animated: true }
 ];
 
-const defaultViewport = { x: -50, y: -50, zoom: 1.1 };
+const defaultViewport = { x: -50, y: -50, zoom: 1 };
 
 const VisualSystem = () => {
   return (
