@@ -24,7 +24,7 @@ const Home = () => {
         category: 'Perception',
         items: [
             { name: 'Visual System', path: '/visualsystem' },
-            { name: 'Auditory System' },
+            { name: 'Auditory System', path: '/auditorysystem' },
             { name: 'Vestibular System' },
             { name: 'Olfactory System' },
         ],
@@ -37,6 +37,12 @@ const Home = () => {
             { name: 'Attention' },
         ],
     },
+    {
+      category: 'Statistics',
+      items: [
+          { name: 'Hypothesis Testing', path: '/hypothesistesting' }
+      ],
+  },
   ];
 
   return (
@@ -134,4 +140,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
