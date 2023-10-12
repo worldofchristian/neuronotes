@@ -88,7 +88,7 @@ const VisualSystem = ({ defaultPosition }) => {
                 from the present moment. </p>
 
                 <div
-                className='my-12'>
+                className='flex items-center justify-center my-12'>
                   <RetinatoV2 />
                 </div>
 
@@ -106,7 +106,7 @@ const VisualSystem = ({ defaultPosition }) => {
                 </p>
 
                 <div
-                className='my-12'>
+                className='flex items-center justify-center my-12'>
                   <DorsalVentral />
                 </div>
 
@@ -124,7 +124,7 @@ const VisualSystem = ({ defaultPosition }) => {
                 </p>
 
                 <div
-                className='my-12'>
+                className='flex items-center justify-center my-12'>
                   <FFA />
                 </div>
                 

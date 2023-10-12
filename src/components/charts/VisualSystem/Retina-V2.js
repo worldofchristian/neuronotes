@@ -40,7 +40,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const RetinatoV2 = () => {
   return (
     <div 
-    style={{ height: '700px', maxWidth: '100%', pointerEvents: 'none' }}
+    style={{ height: '700px', width: '500px', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 
