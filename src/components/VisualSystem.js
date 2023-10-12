@@ -12,7 +12,7 @@ const VisualSystem = ({ defaultPosition }) => {
     className='flex items-center justify-center'>
         
         <div
-        className='max-w-4xl mx-auto'>
+        className='max-w-4xl mx-2'>
             <div
             className='flex-col'>
                 <div
