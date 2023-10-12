@@ -5,49 +5,49 @@ import 'reactflow/dist/style.css';
 const initialNodes = [
     {
         id: 'mst',
-        position: { x: 150, y: -500 },
+        position: { x: 50, y: -500 },
         data: { label: 'MST (Medial Superior Temporal area): Analyzing more complex aspects of motion, including the motion of objects relative to the background.' },
         draggable: false
       },
       {
         id: 'ppc', 
-        position: { x: 150, y: 100 },
+        position: { x: 50, y: 100 },
         data: { label: 'Posterior Parietal Cortex: Involved in spatial awareness and sensory integration.' },
         draggable: false  
       },
       {
         id: 'spl',
-        position: { x: 150, y: 500 },
+        position: { x: 50, y: 500 },
         data: { label: 'Superior Parietal Lobule (SPL): Involved in spatial relations and coordination.' },
         draggable: false
       },
       {
         id: 'precuneus',
-        position: { x: 150, y: 700 },
+        position: { x: 50, y: 700 },
         data: { label: 'Precuneus: Plays a role in episodic memory, visuospatial processing, and self-reflection.' },
         draggable: false
       },
       {
         id: 'v4',
-        position: { x: 350, y: -100 },
+        position: { x: 250, y: -100 },
         data: { label: 'V4: Processes color and shape, helps in object recognition.' },
         draggable: false
       },
       {
         id: 'it',
-        position: { x: 350, y: 100 },
+        position: { x: 250, y: 100 },
         data: { label: 'IT (Inferotemporal Cortex): Involved in recognition and identification of objects.' },
         draggable: false
       },
       {
         id: 'ffa',
-        position: { x: 350, y: 500 },
+        position: { x: 250, y: 500 },
         data: { label: 'FFA (Fusiform Face Area): Specialized for facial recognition.' },
         draggable: false
       },
       {
         id: 'ppa',
-        position: { x: 350, y: 700 },
+        position: { x: 250, y: 700 },
         data: { label: 'PPA (Parahippocampal Place Area): Involved in recognizing places and scenes.' },
         draggable: false
       }
@@ -70,7 +70,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const FFA = () => {
   return (
     <div 
-    style={{ height: '600px', width: '500px', pointerEvents: 'none' }}
+    style={{ height: '600px', width: '350px', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 

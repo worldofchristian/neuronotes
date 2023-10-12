@@ -5,25 +5,25 @@ import 'reactflow/dist/style.css';
 const initialNodes = [
   {
     id: 'retina',
-    position: { x: 150, y: 100 },
+    position: { x: 50, y: 100 },
     data: { label: 'Retina: Captures light and converts it into electrical signals.' },
     draggable: false
   },
   {
     id: 'lgn',
-    position: { x: 275, y: 300 },
+    position: { x: 175, y: 300 },
     data: { label: 'LGN (Lateral Geniculate Nucleus): Acts as a relay station, sending signals to V1.' },
     draggable: false
   },
   {
     id: 'v1',
-    position: { x: 275, y: 450 },
+    position: { x: 175, y: 450 },
     data: { label: 'V1: Responsible for edge detection, basic shapes, and some color processing.' },
     draggable: false
   },
   {
     id: 'v2',
-    position: { x: 275, y: 600 },
+    position: { x: 175, y: 600 },
     data: { label: 'V2: Constructs more complex forms like intricate shapes and object recognition.' },
     draggable: false
   },
@@ -40,7 +40,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const RetinatoV2 = () => {
   return (
     <div 
-    style={{ height: '700px', width: '500px', pointerEvents: 'none' }}
+    style={{ height: '700px', width: '350px', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 
