@@ -70,7 +70,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const FFA = () => {
   return (
     <div 
-    style={{ height: '600px', width: '100%', pointerEvents: 'none' }}
+    style={{ height: '600px', maxWidth: '100%', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 

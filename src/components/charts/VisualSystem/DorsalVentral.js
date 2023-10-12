@@ -81,7 +81,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const DorsalVentral = () => {
   return (
     <div 
-    style={{ height: '850px', width: '100%', pointerEvents: 'none' }}
+    style={{ height: '850px', maxWidth: '100%', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 
