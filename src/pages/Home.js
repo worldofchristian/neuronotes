@@ -67,7 +67,7 @@ const Home = () => {
 
           <h1 
           className="mb-8 text-4xl p-4 text-slate-700 font-bold"
-          >Interactive diagrams for brain systems</h1>
+          >neuronotes</h1>
         </div>
 
         <div
