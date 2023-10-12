@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaAngleRight } from 'react-icons/fa';
+import { FaAngleRight, FaAngleDown } from 'react-icons/fa';
 import '@lottiefiles/lottie-player';
 
 const Home = () => {
@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <>
     <div 
-    className="hero min-h-screen">
+    className="hero min-h-screen bg-white">
       <div 
       className="text-center">
         <div 
@@ -81,27 +81,21 @@ const Home = () => {
                   key={index} 
                   className="mb-6">
                       <button
-                      className="flex items-center justify-between gap-8 w-full bg-base-300 px-4 py-4 rounded-md"
+                      className="flex items-center justify-between gap-8 w-full bg-slate-100 p-4 rounded-lg shadow-sm"
                       onClick={() => toggleCategory(category.category)}>
 
                         <span 
-                        className="text-lg font-medium"
+                        className="text-lg text-slate-800 font-medium"
                         >{category.category}</span>
 
-                        <svg
-                        className={`w-6 h-6 transition-transform duration-300 transform ${
-                          activeCategory === category.category ? 'rotate-90' : 'rotate-0'
-                        }`}
-                        viewBox="0 0 24 24"
-                        fill="currentColor">
+                        {
+                          activeCategory === category.category ? (
+                            <FaAngleDown className="w-6 h-6 text-slate-800 transition-transform duration-300" />
+                          ) : (
+                            <FaAngleRight className="w-6 h-6 text-slate-800 transition-transform duration-300" />
+                          )
+                        }
 
-                          <path
-                          d="M9 5l7 7-7 7"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round" />
-                        </svg>
                       </button>
 
                       {activeCategory === category.category && (
@@ -116,11 +110,11 @@ const Home = () => {
                                   <div
                                   className='flex'>
                                     <FaAngleRight
-                                    className='ml-4 mt-4'
+                                    className='ml-4 mt-4 text-slate-800'
                                     />
 
                                     <h3 
-                                    className="text-lg font-large my-2 underline cursor-pointer"
+                                    className="text-lg text-slate-800 font-large my-2 underline cursor-pointer"
                                     >{item.name}</h3>
                                   </div>
                                 </Link>
