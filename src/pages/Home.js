@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <>
     <div 
-    className="bg-white">
+    className="hero min-h-screen bg-white">
       <div 
       className="text-center">
         <div 
