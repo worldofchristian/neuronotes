@@ -5,55 +5,55 @@ import 'reactflow/dist/style.css';
 const initialNodes = [
     {
         id: 'v2',
-        position: { x: 250, y: -50 },
+        position: { x: 150, y: -50 },
         data: { label: 'V2: Constructs more complex forms like intricate shapes and object recognition.' },
         draggable: false
       },
     {
         id: 'dorsal',
-        position: { x: 150, y: 150 },
+        position: { x: 50, y: 150 },
         data: { label: 'Dorsal Stream: Concerned with spatial location and motion.' },
         draggable: false
       },
       {
         id: 'mt',
-        position: { x: 150, y: 500 },
+        position: { x: 50, y: 500 },
         data: { label: 'MT (Middle Temporal area): Processing motion, perceiving the speed and direction of moving objects.' },
         draggable: false
       },
       {
         id: 'mst',
-        position: { x: 150, y: 650 },
+        position: { x: 50, y: 650 },
         data: { label: 'MST (Medial Superior Temporal area): Analyzing more complex aspects of motion, including the motion of objects relative to the background.' },
         draggable: false
       },
       {
         id: 'ppc', 
-        position: { x: 150, y: 1700 },
+        position: { x: 50, y: 1700 },
         data: { label: 'Posterior Parietal Cortex: Involved in spatial awareness and sensory integration.' },
         draggable: false  
       },
       {
         id: 'ventral',
-        position: { x: 350, y: 150 },
+        position: { x: 250, y: 150 },
         data: { label: 'Ventral Stream: Responsible for object recognition and identification.' },
         draggable: false
       },
       {
         id: 'v4',
-        position: { x: 350, y: 300 },
+        position: { x: 250, y: 300 },
         data: { label: 'V4: Processes color and shape, helps in object recognition.' },
         draggable: false
       },
       {
         id: 'it',
-        position: { x: 350, y: 500 },
+        position: { x: 250, y: 500 },
         data: { label: 'IT (Inferotemporal Cortex): Involved in recognition and identification of objects.' },
         draggable: false
       },
       {
         id: 'perirhinal',
-        position: { x: 350, y: 1000 },
+        position: { x: 250, y: 1000 },
         data: { label: 'Perirhinal Cortex: Involved in object recognition and memory.' },
         draggable: false
       },
@@ -81,7 +81,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const DorsalVentral = () => {
   return (
     <div 
-    style={{ height: '850px', width: '500px', pointerEvents: 'none' }}
+    style={{ height: '850px', width: '350px', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 
