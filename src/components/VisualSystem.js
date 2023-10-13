@@ -11,7 +11,7 @@ const VisualSystem = ({ defaultPosition }) => {
     <div
     className='flex items-center justify-center'>
       <div
-      className='min-w-md lg:max-w-4xl p-4'>
+      className='max-w-sm lg:max-w-4xl p-2'>
           <div
           className='flex-col my-12'>
               <div
@@ -36,11 +36,11 @@ const VisualSystem = ({ defaultPosition }) => {
               >Visual System</h1>
 
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >Light</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Light is a narrow portion of the electromagnetic spectrum. Humans can see light with wavelengths 
               between 400 and 800 nm. Different animals can see different portions of the spectrum. For example, 
               bees can see ultraviolet waves (100nm-400nm) which helps them with pollination. Mantis shrimp can 
@@ -51,11 +51,11 @@ const VisualSystem = ({ defaultPosition }) => {
               off the object and is then able to be picked up by the photoreceptors in our eyes.</p>
               
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >The Eye</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Light passes through a transparent window called the cornea, and into the pupil. The iris is the colored 
               part of the eye that controls how much light can enter by expanding or contracting the pupil. From there, 
               it is focused onto the back of the eye by the lens. The retina is found at the back of the eye and holds the 
@@ -72,11 +72,11 @@ const VisualSystem = ({ defaultPosition }) => {
               presence of light in the eyes is known to suppress melatonin. This explains why we prefer to sleep in darkness.</p>
 
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >Visual Pathways</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Once light has entered the eye, the visual input travels along the optic nerve to be interpreted by the brain. The input goes 
               to the middle of the brain, reaching the lateral geniculate nuclei in the thalamus. These are found on each hemisphere of the brain 
               and act as a relay station between the retina and the visual cortex. This is known as the retinal-geniculate-striate pathway.<br /><br />
@@ -92,12 +92,12 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
 
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >Object Recognition
               </h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Beyond the striate cortex (V1) is the etraxstriate cortex. This area handles the more complicated parts of visual processing. Within this 
               cortex the visual input forks into two streams, dorsal and ventral. The dorsal stream is known as the “where” pathway, it deals with the locations 
               of objects and how to interact with them. The ventral stream is called the “what” pathway, it handles the names and functions of objects. It’s worth 
@@ -110,7 +110,7 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'>
+              className='text-base text-left justify-start items-start mt-2'>
               However, these regions do work together to generate an image of the world around us. Damage to any of these areas can cause major alterations to how 
               we perceive our surroundings. Take the inferotemporal cortex for instance. This is a piece of the temporal lobe that belongs to the “what” (ventral) pathway, 
               damage to this region leads to Agnosia, a lack of ability to recognize objects, despite the ability to see them.<br /><br />
@@ -128,11 +128,11 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
               
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >Color Perception</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >There are 3 steps to the perception of color:<br /><br />
 
               1) Detection<br />
@@ -155,22 +155,22 @@ const VisualSystem = ({ defaultPosition }) => {
               the absence of it’s corresponding cone type in the retina.</p>
               
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
               >Depth Perception</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Depth perception is an important part of how we’re able to make sense of the world around us. 
               After the retinal image is created, the brain has to interpret where exactly the objects in the 
               image are located in 3 dimensional space. This is done through a variety of cues, some of which 
               only require the use of one eye (monocular), while others require two (binocular).</p>
 
               <h2
-              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-8 mx-4'
+              className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-8'
               >Monocular Depth Cues</h2>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >If we know from experience how big an object is supposed to be, we can figure out how far away 
               it is by how large it appears when we see it. This is a cue called familiar size. Because we know 
               that human beings are several feet tall, we can ascertain that a person must be very far away if 
@@ -186,7 +186,7 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Forced perspective is an illusion based on this principle. It can be used to manipulate objects 
               and distance to make something appear smaller or larger than it really is.</p>
 
@@ -199,7 +199,7 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Gradients are also used to judge the distance of objects. We have an intuitive understanding that 
               light gets scattered by the atmosphere. Therefore, anything far off in the distance will appear 
               fainter than usual. This cue is called aerial perspective.</p>
@@ -213,7 +213,7 @@ const VisualSystem = ({ defaultPosition }) => {
               </div>
 
               <p
-              className='text-base text-left justify-start items-start mt-2 mx-4'
+              className='text-base text-left justify-start items-start mt-2'
               >Linear perspective is when parallel lines converge to a single point in the horizon, known 
               as the vanishing point.</p>
 
