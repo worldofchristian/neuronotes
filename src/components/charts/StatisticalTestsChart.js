@@ -1,16 +1,10 @@
 import React from 'react';
 import ReactFlow, { Background } from 'reactflow';
 import 'reactflow/dist/style.css';
-import MainNode from './nodes/MainNode';
-
-const nodeTypes = {
-    custom: MainNode,
-}
 
 const initialNodes = [
     {
         id: 'start',
-        type: 'custom',
         position: { x: 100, y: 200 },
         data: { label: 'Determine Data Type' },
         draggable: false
@@ -103,13 +97,12 @@ const initialEdges = [
 
 const defaultViewport = { x: -50, y: -50, zoom: 1 };
 
-const HypothesisTesting = () => {
+const StatisticalTestsChart = () => {
     return (
       <div 
       style={{ width: '100vw', height: '100vh' }}
       >   
           <ReactFlow 
-          nodeTypes={nodeTypes}
           nodes={initialNodes} 
           edges={initialEdges}
           defaultViewport={defaultViewport}
@@ -125,4 +118,4 @@ const HypothesisTesting = () => {
     );
   };
   
-  export default HypothesisTesting;
+  export default StatisticalTestsChart;

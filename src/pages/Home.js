@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   // data for the categories
-  const cognitiveItems = [
+  const categories = [
     {
         category: 'Perception',
         items: [
@@ -40,9 +40,9 @@ const Home = () => {
     {
       category: 'Statistics',
       items: [
-          { name: 'Hypothesis Testing', path: '/hypothesistesting' }
+          { name: 'Statistical Tests', path: '/statisticaltests' }
       ],
-  },
+    },
   ];
 
   return (
@@ -76,7 +76,7 @@ const Home = () => {
           className='max-w-7xl'>
             <div 
             className="container px-4 py-6">
-              {cognitiveItems.map((category, index) => (
+              {categories.map((category, index) => (
                   <div 
                   key={index} 
                   className="mb-6">

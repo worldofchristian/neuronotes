@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import VisualSystem from './components/VisualSystem';
 import AuditorySystem from './components/AuditorySystem'
-import HypothesisTesting from './components/HypothesisTesting';
+import StatisticalTests from './components/StatisticalTests';
+
 
 const RouteSwitch = () => {
   return (
@@ -12,7 +13,7 @@ const RouteSwitch = () => {
         <Route path='/' element={<Home />} />
         <Route path='/visualsystem' element={<VisualSystem />} />
         <Route path='/auditorysystem' element={<AuditorySystem />} />
-        <Route path='/hypothesistesting' element={<HypothesisTesting />} />
+        <Route path='/statisticaltests' element={<StatisticalTests />} />
       </Routes>
     </BrowserRouter>
   );

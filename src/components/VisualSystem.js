@@ -17,18 +17,16 @@ const VisualSystem = ({ defaultPosition }) => {
               <div
               className='flex items-center text-center justify-center mt-6 gap-2'>
                   <Link to='/'>
-                      <p
-                      className='text-base font-normal text-center underline tracking-wide'
-                      >Home</p>
+                    <p
+                    className='text-base font-normal text-center underline tracking-wide'
+                    >Home</p>
                   </Link>
 
                   <FaAngleRight />
 
-                  <Link to='/explore'>
-                      <h2
-                      className='text-base font-normal underline tracking-wide'
-                      >Perception</h2>
-                  </Link>
+                  <h2
+                  className='text-base font-normal tracking-wide'
+                  >Perception</h2>
               </div>
               
               <h1
