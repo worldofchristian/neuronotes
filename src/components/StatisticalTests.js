@@ -10,10 +10,10 @@ const StatisticalTests = () => {
     const [moreThanTwoGroups, setMoreThanTwoGroups] = useState(false);
     const [moreThanFiveFrequency, setMoreThanFiveFrequency] = useState(false)
     // state for the info modals
-    const [nominalOpen, setIsNominalOpen] = useState(false);
-    const [ordinalOpen, setIsOrdinalOpen] = useState(false);
-    const [intervalOpen, setIsIntervalOpen] = useState(false);
-    const [ratioOpen, setIsRatioOpen] = useState(false);
+    // const [nominalOpen, setIsNominalOpen] = useState(false);
+    // const [ordinalOpen, setIsOrdinalOpen] = useState(false);
+    // const [intervalOpen, setIsIntervalOpen] = useState(false);
+    // const [ratioOpen, setIsRatioOpen] = useState(false);
 
     // advance to next step
     const nextStep = () => setCurrentStep(currentStep + 1);
