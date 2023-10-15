@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaAngleRight, FaAngleLeft, FaInfoCircle, FaRedoAlt } from 'react-icons/fa';
+import { FaAngleRight, FaAngleLeft, FaRedoAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const StatisticalTests = () => {
@@ -84,10 +84,6 @@ const StatisticalTests = () => {
                                     >ex) hair color
                                     </p>
                                 </button>
-
-                                <FaInfoCircle 
-                                className='text-2xl ml-2 text-blue-700'
-                                />
                             </div>
                             
                             <div
@@ -113,10 +109,6 @@ const StatisticalTests = () => {
                                     >ex) clothing sizes
                                     </p>
                                 </button>
-
-                                <FaInfoCircle 
-                                className='text-2xl ml-2 text-blue-700'
-                                />
                             </div>
                             
                             <div
@@ -142,10 +134,6 @@ const StatisticalTests = () => {
                                     >ex) IQ scores
                                     </p>
                                 </button>
-                                
-                                <FaInfoCircle 
-                                className='text-2xl ml-2 text-blue-700'
-                                />
                             </div>
                             
                             <div
@@ -171,10 +159,6 @@ const StatisticalTests = () => {
                                     >ex) Age in years
                                     </p>
                                 </button>
-
-                                <FaInfoCircle 
-                                className='text-2xl ml-2 text-blue-700'
-                                />
                             </div>
                         </div>
                     </div>

@@ -25,8 +25,7 @@ const Home = () => {
         items: [
             { name: 'Visual System', path: '/visualsystem' },
             { name: 'Auditory System', path: '/auditorysystem' },
-            { name: 'Vestibular System' },
-            { name: 'Olfactory System' },
+            { name: 'Olfactory System', path: '/olfactorysystem' },
         ],
     },
     {

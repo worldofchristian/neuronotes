@@ -11,7 +11,7 @@ const VisualSystem = ({ defaultPosition }) => {
     <div
     className='flex items-center justify-center'>
       <div
-      className='max-w-sm lg:max-w-4xl p-2'>
+      className='max-w-sm lg:max-w-4xl'>
           <div
           className='flex-col my-12'>
               <div
