@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import RetinatoV2 from './charts/VisualSystem/Retina-V2';
 import DorsalVentral from './charts/VisualSystem/DorsalVentral';
 import FFA from './charts/VisualSystem/FFA';
+import VisualSystemFlashcard from './flashcards/VisualSystem/VisualSystemFlashcard';
 
 const VisualSystem = ({ defaultPosition }) => {
   return (
@@ -151,6 +152,11 @@ const VisualSystem = ({ defaultPosition }) => {
               Color-anomalous individuals can still make discriminations based on wavelength, they just differ from how the majority of people are able to. There are several 
               types of color blindness, ranging from the inability to see certain colors, to the inability to see any at all. The type of color blindness is correlated with 
               the absence of it’s corresponding cone type in the retina.</p>
+
+              <div
+              className='flex items-center justify-center my-12'>
+                <VisualSystemFlashcard />
+              </div>
               
               <h2
               className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
