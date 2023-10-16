@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaAngleRight, FaAngleLeft, FaRedoAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -8,12 +8,12 @@ const StatisticalTests = () => {
     // state for the quiz selections
     const [dataType, setDataType] = useState(null);
     const [moreThanTwoGroups, setMoreThanTwoGroups] = useState(false);
-    const [moreThanFiveFrequency, setMoreThanFiveFrequency] = useState(false)
-    // state for the info modals
-    // const [nominalOpen, setIsNominalOpen] = useState(false);
-    // const [ordinalOpen, setIsOrdinalOpen] = useState(false);
-    // const [intervalOpen, setIsIntervalOpen] = useState(false);
-    // const [ratioOpen, setIsRatioOpen] = useState(false);
+    const [moreThanFiveFrequency, setMoreThanFiveFrequency] = useState(false);
+
+    // load to the top of the page
+    useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
 
     // advance to next step
     const nextStep = () => setCurrentStep(currentStep + 1);
