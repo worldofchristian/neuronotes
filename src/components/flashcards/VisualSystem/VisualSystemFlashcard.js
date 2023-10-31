@@ -74,7 +74,7 @@ const VisualSystemFlashcard = () => {
 
   return (
     <div 
-    className="rounded-xl shadow-md overflow-hidden w-80">
+    className="rounded-xl bg-slate-100 shadow-md overflow-hidden w-80">
       <div 
       className="px-6 py-4 my-6 text-center">
         <h2 

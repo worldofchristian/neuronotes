@@ -31,10 +31,15 @@ const Home = () => {
     {
         category: 'Cognition',
         items: [
-            { name: 'Learning' },
-            { name: 'Memory' },
-            { name: 'Attention' },
+            { name: 'Cognitive Reserve' },
+            { name: 'Laterality' },
         ],
+    },
+    {
+      category: 'Development',
+      items: [
+          { name: 'Developmental Theories' },
+      ],
     },
     {
       category: 'Statistics',
@@ -47,21 +52,21 @@ const Home = () => {
   return (
     <>
     <div 
-    className="hero min-h-screen bg-white">
+    className="hero min-h-screen bg-gray-200">
       <div 
       className="text-center">
         <div 
         className="max-w-lg">
           <div
           className='flex items-center justify-center'>
-          <lottie-player
-          src="https://lottie.host/3f24fdbb-2d8a-4aad-8272-b46e20d82282/OR4pQtL5vP.json"
-          background="transparent"
-          speed="1"
-          style={{ width: '300px', height: '300px' }}
-          loop
-          autoplay
-          ></lottie-player>
+            <lottie-player
+            src="https://lottie.host/3f24fdbb-2d8a-4aad-8272-b46e20d82282/OR4pQtL5vP.json"
+            background="transparent"
+            speed="1"
+            style={{ width: '230px', height: '230px' }}
+            loop
+            autoplay
+            ></lottie-player>
           </div>
 
           <h1 
@@ -73,18 +78,17 @@ const Home = () => {
         className='flex items-center justify-center'>
           <div
           className='max-w-7xl'>
-            <div 
-            className="container px-4 py-6">
+            <div className="container px-4 py-6 grid grid-cols-2 gap-4">
               {categories.map((category, index) => (
                   <div 
                   key={index} 
                   className="mb-6">
                       <button
-                      className="flex items-center justify-between gap-8 w-full bg-slate-100 p-4 rounded-lg shadow-sm"
+                      className="flex items-center justify-between gap-4 w-full bg-slate-100 p-4 rounded-lg shadow-sm"
                       onClick={() => toggleCategory(category.category)}>
 
                         <span 
-                        className="text-lg text-slate-800 font-medium"
+                        className="text-md font-medium"
                         >{category.category}</span>
 
                         {
@@ -103,17 +107,17 @@ const Home = () => {
                           {category.items.map((item, index) => (
                             <div 
                             key={index} 
-                            className="flex my-4 items-center justify-between">
+                            className="flex my-2 items-center justify-between">
                               <div>
                                 <Link to={item.path}>
                                   <div
                                   className='flex'>
                                     <FaAngleRight
-                                    className='ml-4 mt-4 text-slate-800'
+                                    className='mt-3 text-slate-800'
                                     />
 
                                     <h3 
-                                    className="text-lg text-slate-800 font-large my-2 underline cursor-pointer"
+                                    className="text-md text-slate-800 text-left my-2 underline cursor-pointer"
                                     >{item.name}</h3>
                                   </div>
                                 </Link>

@@ -6,7 +6,7 @@ const AuditorySystem = () => {
   return (
     <>
     <div
-    className='flex items-center justify-center my-6'>  
+    className='flex items-center justify-center bg-gray-200'>  
       <div
       className='max-w-sm lg:max-w-4xl'>
           <div
