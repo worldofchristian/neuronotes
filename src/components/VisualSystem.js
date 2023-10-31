@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useEffect } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import RetinatoV2 from './charts/VisualSystem/Retina-V2';
@@ -7,6 +8,11 @@ import FFA from './charts/VisualSystem/FFA';
 import VisualSystemFlashcard from './flashcards/VisualSystem/VisualSystemFlashcard';
 
 const VisualSystem = ({ defaultPosition }) => {
+  // load to the top of the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
     <div
