@@ -44,7 +44,7 @@ const Home = () => {
     {
       category: 'Statistics',
       items: [
-          { name: 'Statistical Tests', path: '/statisticaltests' }
+          { name: 'Hypothesis Testing', path: '/hypothesistesting' }
       ],
     },
   ];
