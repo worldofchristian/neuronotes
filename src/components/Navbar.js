@@ -1,59 +1,171 @@
 import React, { useState } from 'react';
 import { HiMenuAlt3 } from "react-icons/hi";
-import { FaAngleDoubleLeft, FaAngleDoubleUp, FaAngleRight } from 'react-icons/fa';
+import { FaAngleDoubleUp, FaAngleDown, FaAngleRight, FaCheck } from 'react-icons/fa';
+import { IoLanguage } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOpen = () => {
+    setIsOpen(true);
+  }
+
   return (
     <>
-      <nav className='w-full py-4 fixed top-0 z-20 bg-slate-700 backdrop-filter bg-opacity-30 backdrop-blur-xl'>
+    <div className='max-w-4xl'>
+      <nav className='w-full py-1 fixed top-0 z-20 bg-base-100 backdrop-filter bg-opacity-80 backdrop-blur-xl'>
         <div className='w-full flex items-center justify-between max-w-5xl mx-auto px-4 sm:px-0'>
+          
           <div className='flex flex-row justify-start'>
-            <FaAngleDoubleLeft className='mr-2 mt-1 text-lg' />
-          </div>
+            <div className="dropdown dropdown-bottom">
+              <div tabIndex={0} role="button" className="btn m-1 btn-ghost">
+                <IoLanguage className='text-xl' />
+              </div>
 
-          <div className='flex justify-center'>
-            <div className='flex flex-row'>
-              <p className='text-md font-semibold'>neuronotes</p>
+              <ul 
+              tabIndex={0} 
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <div className='flex flex-row mt-5 cursor-pointer'>
+                    <FaCheck className='text-green-200' />
 
-              <FaAngleRight className='text-lg mt-1' />
+                    <p className='text-base'
+                    >English 
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <div className='flex flex-row mt-5 cursor-pointer'>
+                    <FaAngleRight />
+
+                    <p className='text-base'
+                    >Español
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <div className='flex flex-row my-5 cursor-pointer'>
+                    <FaAngleRight />
+
+                    <p className='text-base'
+                    >Français
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div className='flex justify-end'>
-            <HiMenuAlt3 className='text-lg text-white' />
+          <div 
+          className='flex justify-center cursor-pointer'
+          onClick={handleOpen}
+          >
+            <div className='flex flex-row'>
+              <p className='text-md font-semibold'
+              >neuronotes
+              </p>
+
+              { isOpen ? ( 
+              <FaAngleDown className='text-lg ml-1 mt-1' />
+              ) : (
+                <FaAngleRight className='text-lg ml-1 mt-1' />
+              )}
+            </div>
           </div>
+
+          <div className='flex justify-end cursor-pointer'>
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="btn m-1 btn-ghost">
+                <HiMenuAlt3 className='text-xl text-white' />
+              </div>
+              
+              <ul 
+              tabIndex={0} 
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <div className='flex flex-row mt-5 cursor-pointer'>
+                    <FaAngleRight />
+
+                    <p className='text-base'
+                    >Report a mistake
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <div className='flex flex-row my-5 cursor-pointer'>
+                    <FaAngleRight />
+
+                    <p className='text-base'
+                    >Developers
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>      
         </div>
     </nav>
 
     { isOpen && (
-      <div className='fixed top-16 left-0 right-0 flex items-center justify-center z-10 bg-base-100 shadow-lg'>
+      <div className='fixed top-14 left-0 right-0 flex items-center justify-center z-10 bg-base-100 backdrop-filter bg-opacity-80 backdrop-blur-xl shadow-lg'>
         <div className='flex flex-col mt-12'>
           <div className='max-w-sm'>
             <div className='flex flex-col'>
-              <p className='text-md mb-1 ml-1'
-              >Email</p>
+              <div className='flex flex-row cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
 
-              <input 
-              className='input input-bordered'
-              placeholder='Type here'
-              />
+                <p className='text-lg'
+                >Default Mode Network
+                </p>
+              </div>
 
-              <p className='text-md mb-1 ml-1 mt-4'
-              >Message</p>
+              <div className='flex flex-row mt-5 cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
 
-              <textarea
-              className='textarea textarea-bordered' 
-              placeholder='Type here'
-              />
+                <p className='text-lg'
+                >Salience Network
+                </p>
+              </div>
 
-              <button 
-              className='btn btn-accent mt-2'
-              >send</button>
+              <div className='flex flex-row mt-5 cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
+
+                <p className='text-lg'
+                >Central Executive Network
+                </p>
+              </div>
+
+              <div className='flex flex-row mt-5 cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
+
+                <p className='text-lg'
+                >Sensorimotor Network
+                </p>
+              </div>
+
+              <div className='flex flex-row mt-5 cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
+
+                <p className='text-lg'
+                >Visual Network
+                </p>
+              </div>
+
+              <div className='flex flex-row mt-5 cursor-pointer'>
+                <FaAngleRight className='mt-1 mr-1' />
+
+                <p className='text-lg'
+                >Auditory Network
+                </p>
+              </div>
             </div>
 
-            <div className='flex items-center justify-center my-12'>
+            <div className='flex items-center justify-center mt-20 mb-12'>
               <p className='text-xl font-bold cursor-pointer tracking-wide'
               onClick={() => {
                 setIsOpen(false);
@@ -66,6 +178,8 @@ const Navbar = () => {
         </div>
       </div>
       )}
+
+    </div>
     </>
   )
 }
