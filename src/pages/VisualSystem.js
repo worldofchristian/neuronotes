@@ -1,7 +1,5 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { FaAngleRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import RetinatoV2 from '../components/charts/VisualSystem/Retina-V2';
 import DorsalVentral from '../components/charts/VisualSystem/DorsalVentral';
 import FFA from '../components/charts/VisualSystem/FFA';
