@@ -12,7 +12,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/visualsystem' element={<VisualSystem />} />
+        <Route path='/visualnetwork' element={<VisualSystem />} />
         <Route path='/auditorysystem' element={<AuditorySystem />} />
         <Route path='/hypothesistesting' element={<HypothesisTesting />} />
         <Route path='/olfactorysystem' element={<OlfactorySystem />} />

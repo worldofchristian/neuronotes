@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import HomeCard from '../components/HomeCard';
 import dmn from '../img/dmn.jpg';
@@ -54,12 +55,14 @@ const Home = () => {
             className='ml-[20%]'
             />
 
-            <HomeCard
-            SystemName={'Visual Network'}
-            SystemImage={vn}
-            SystemDescription={'Processing and interpreting visual input'}
-            className='mr-[20%]'
-            />
+            <Link to='/visualnetwork'>
+              <HomeCard
+              SystemName={'Visual Network'}
+              SystemImage={vn}
+              SystemDescription={'Processing and interpreting visual input'}
+              className='mr-[20%]'
+              />
+            </Link>
 
             <HomeCard
             SystemName={'Auditory Network'}

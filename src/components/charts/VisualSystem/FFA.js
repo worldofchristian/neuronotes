@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactFlow, { Background } from 'reactflow';
 import 'reactflow/dist/style.css';
+import '../CustomNode.css'
 
 const initialNodes = [
     {

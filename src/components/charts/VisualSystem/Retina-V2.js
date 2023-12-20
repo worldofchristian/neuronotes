@@ -1,31 +1,36 @@
 import React from 'react';
 import ReactFlow, { Background } from 'reactflow';
 import 'reactflow/dist/style.css';
+import '../CustomNode.css'
 
 const initialNodes = [
   {
     id: 'retina',
     position: { x: 50, y: 100 },
     data: { label: 'Retina: Captures light and converts it into electrical signals.' },
-    draggable: false
+    draggable: false,
+    className: 'darkNodeStyle'
   },
   {
     id: 'lgn',
-    position: { x: 175, y: 300 },
+    position: { x: 175, y: 275 },
     data: { label: 'LGN (Lateral Geniculate Nucleus): Acts as a relay station, sending signals to V1.' },
-    draggable: false
+    draggable: false,
+    className: 'darkNodeStyle'
   },
   {
     id: 'v1',
     position: { x: 175, y: 450 },
     data: { label: 'V1: Responsible for edge detection, basic shapes, and some color processing.' },
-    draggable: false
+    draggable: false,
+    className: 'darkNodeStyle'
   },
   {
     id: 'v2',
-    position: { x: 175, y: 600 },
+    position: { x: 175, y: 615 },
     data: { label: 'V2: Constructs more complex forms like intricate shapes and object recognition.' },
-    draggable: false
+    draggable: false,
+    className: 'darkNodeStyle'
   },
 ];
 
