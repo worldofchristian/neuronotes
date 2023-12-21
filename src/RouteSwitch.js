@@ -13,7 +13,7 @@ const RouteSwitch = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/visualnetwork' element={<VisualSystem />} />
-        <Route path='/auditorysystem' element={<AuditorySystem />} />
+        <Route path='/auditorynetwork' element={<AuditorySystem />} />
         <Route path='/hypothesistesting' element={<HypothesisTesting />} />
         <Route path='/olfactorysystem' element={<OlfactorySystem />} />
       </Routes>

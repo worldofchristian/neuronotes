@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { HiMenuAlt3 } from "react-icons/hi";
-import { FaAngleDoubleUp, FaAngleDown, FaAngleRight, FaCheck } from 'react-icons/fa';
+import { FaAngleDoubleUp, FaAngleDown, FaAngleRight, FaCheck, FaHome } from 'react-icons/fa';
 import { IoLanguage } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,36 +77,9 @@ const Navbar = () => {
           </div>
 
           <div className='flex justify-end cursor-pointer'>
-            <div className="dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn m-1 btn-ghost">
-                <HiMenuAlt3 className='text-xl text-white' />
-              </div>
-              
-              <ul 
-              tabIndex={0} 
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <div className='flex flex-row mt-5 cursor-pointer'>
-                    <FaAngleRight />
-
-                    <p className='text-base'
-                    >Report a mistake
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <div className='flex flex-row my-5 cursor-pointer'>
-                    <FaAngleRight />
-
-                    <p className='text-base'
-                    >Developers
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <Link to='/'>
+              <FaHome className='text-xl' />
+            </Link>
           </div>      
         </div>
     </nav>
@@ -148,21 +121,25 @@ const Navbar = () => {
                 </p>
               </div>
 
-              <div className='flex flex-row mt-5 cursor-pointer'>
-                <FaAngleRight className='mt-1 mr-1' />
+              <Link to='visualnetwork'>
+                <div className='flex flex-row mt-5 cursor-pointer'>
+                  <FaAngleRight className='mt-1 mr-1' />
 
-                <p className='text-lg'
-                >Visual Network
-                </p>
-              </div>
+                  <p className='text-lg'
+                  >Visual Network
+                  </p>
+                </div>
+              </Link>
 
-              <div className='flex flex-row mt-5 cursor-pointer'>
-                <FaAngleRight className='mt-1 mr-1' />
+              <Link to='auditorynetwork'>
+                <div className='flex flex-row mt-5 cursor-pointer'>
+                  <FaAngleRight className='mt-1 mr-1' />
 
-                <p className='text-lg'
-                >Auditory Network
-                </p>
-              </div>
+                  <p className='text-lg'
+                  >Auditory Network
+                  </p>
+                </div>
+              </Link>
             </div>
 
             <div className='flex items-center justify-center mt-20 mb-12'>

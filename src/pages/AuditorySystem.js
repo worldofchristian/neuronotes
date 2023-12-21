@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import AuditorySystemChart from '../components/charts/AuditorySystem/AuditorySystemChart';
 
 const AuditorySystem = () => {
   // load to the top of the page
@@ -11,7 +12,7 @@ const AuditorySystem = () => {
   return (
     <>
     <div
-    className='flex items-center justify-center bg-gray-200'>  
+    className='flex items-center justify-center bg-base-100'>  
       <div
       className='max-w-sm lg:max-w-4xl'>
           <div
@@ -36,6 +37,8 @@ const AuditorySystem = () => {
           <h1
           className='text-3xl font-bold mt-2 text-center tracking-wide'
           >Auditory System</h1>
+
+          <AuditorySystemChart />
 
           <p
           className='text-base text-left justify-start items-start mt-6 mx-4'
