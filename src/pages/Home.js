@@ -9,6 +9,7 @@ import cen from '../img/cen.webp';
 import sms from '../img/sms.jpg';
 import vn from '../img/vn.jpg';
 import as from '../img/as.jpg'
+import Graph from '../components/Graph';
 
 const Home = () => {
   // load to the top of the page
@@ -26,6 +27,8 @@ const Home = () => {
       className='flex items-center justify-center'>
         <div
         className='max-w-6xl'>
+          <Graph />
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 my-20'> 
             <HomeCard 
             SystemName={'Default Mode Network'}
