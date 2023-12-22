@@ -18,7 +18,7 @@ const Navbar = () => {
           
           <div className='flex flex-row justify-start'>
             <div className="dropdown dropdown-bottom">
-              <div tabIndex={0} role="button" className="btn m-1 btn-ghost">
+              <div tabIndex={0} role="button" className="btn btn-ghost">
                 <IoLanguage className='text-xl' />
               </div>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className='flex justify-end cursor-pointer'>
+          <div className='flex justify-end cursor-pointer mr-4'>
             <Link to='/'>
               <FaHome className='text-xl' />
             </Link>

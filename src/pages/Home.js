@@ -18,7 +18,7 @@ const Home = () => {
       <div className='max-w-6xl mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
             
-          <div className='flex items-center justify-center max-h-[600px]'>
+          <div className='flex items-center justify-center max-h-[520px]'>
             <Graph />
           </div>
 
