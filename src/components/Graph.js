@@ -223,7 +223,7 @@ const Graph = ({ handleBtnClick }) => {
       <ForceGraph2D
       graphData={graphData}
       nodeLabel="name"
-      nodeVal={2.2}
+      nodeVal={2.5}
       nodeColor={getNodeColor}
       linkDirectionalArrowLength={0}
       linkCurvature={0.25}
