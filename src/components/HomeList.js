@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaCircle } from 'react-icons/fa';
 
 const HomeList = () => {
@@ -9,24 +8,22 @@ const HomeList = () => {
     className='grid grid-cols-2 p-2'>
         <div className='w-full'>
             <div className='flex items-center justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-green-500' />
                 
-                <Link to='/visualnetwork'>
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Visual Network
                 </p>
-                </Link>
             </div>
             </div>
         </div>
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-orange-400' />
 
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Executive Network
                 </p>
             </div>
@@ -35,10 +32,10 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-white' />
 
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Motor Network
                 </p>
             </div>
@@ -47,10 +44,10 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-yellow-300' />
 
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Salience Network
                 </p>
             </div>
@@ -59,24 +56,22 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-cyan-300' />
 
-                <Link to='/auditorynetwork'>
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Auditory Network
                 </p>
-                </Link>
             </div>
             </div>
         </div>
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5 cursor-pointer'>
+            <div className='flex flex-row mt-5'>
                 <FaCircle className='mt-1 mr-4 text-purple-400' />
 
-                <p className='text-md underline'
+                <p className='text-sm'
                 >Default Mode Network
                 </p>
             </div>
