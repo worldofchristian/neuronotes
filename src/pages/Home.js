@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Graph from '../components/Graph';
 import HomeList from '../components/HomeList';
-import { FaAngleDoubleDown } from 'react-icons/fa';
 import HomeCard from '../components/HomeCard';
 import dmn from '../img/dmn.jpg';
 import sn from '../img/sn.jpg';
