@@ -23,7 +23,7 @@ const Home = () => {
             </div>
 
             <div 
-            className='flex items-center justify-center'>
+            className='flex items-center justify-center mb-20'>
               <HomeList />
             </div>
 

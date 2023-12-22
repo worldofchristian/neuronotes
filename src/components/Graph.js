@@ -196,6 +196,8 @@ const Graph = () => {
     nodeColor={getNodeColor}
     linkDirectionalArrowLength={0}
     linkCurvature={0.25}
+    enablePanInteraction={false}
+    enableZoomInteraction={false}
     />
   );
 };
