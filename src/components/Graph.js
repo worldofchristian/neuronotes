@@ -223,7 +223,6 @@ const Graph = () => {
       linkDirectionalArrowLength={0}
       linkCurvature={0.25}
       enablePanInteraction={false}
-      enableZoomInteraction={false}
       />
     </div>
   );
