@@ -12,7 +12,7 @@ const HomeList = () => {
             <div className='flex flex-row mt-5 cursor-pointer'>
                 <FaCircle className='mt-1 mr-4 text-green-500' />
                 
-                <Link to='visualnetwork'>
+                <Link to='/visualnetwork'>
                 <p className='text-md underline'
                 >Visual Network
                 </p>
@@ -62,7 +62,7 @@ const HomeList = () => {
             <div className='flex flex-row mt-5 cursor-pointer'>
                 <FaCircle className='mt-1 mr-4 text-cyan-300' />
 
-                <Link to='visualnetwork'>
+                <Link to='/auditorynetwork'>
                 <p className='text-md underline'
                 >Auditory Network
                 </p>
