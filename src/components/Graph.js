@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ForceGraph2D } from 'react-force-graph';
+import { FaAngleDoubleDown } from 'react-icons/fa';
 
 const graphData = {
   nodes: [
@@ -169,7 +170,7 @@ const graphData = {
   ]
 };
 
-const Graph = () => {
+const Graph = ({ handleBtnClick }) => {
   const graphRef = useRef();
 
   useEffect(() => {
@@ -215,15 +216,27 @@ const Graph = () => {
   };
 
   return (
-    <div ref={graphRef}>
+    <div 
+    className='flex-col'
+    ref={graphRef}
+    >
       <ForceGraph2D
       graphData={graphData}
       nodeLabel="name"
+      nodeVal={2.2}
       nodeColor={getNodeColor}
       linkDirectionalArrowLength={0}
       linkCurvature={0.25}
       enablePanInteraction={false}
       />
+
+      <div className='absolute bottom-[20%] left-1/2 transform -translate-x-1/2'>
+        <button
+        className='btn btn-neutral text-white'
+        onClick={handleBtnClick}
+        >Read more<FaAngleDoubleDown className='ml-2 text-white' />
+        </button>
+      </div>
     </div>
   );
 };

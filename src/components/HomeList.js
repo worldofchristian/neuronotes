@@ -8,7 +8,7 @@ const HomeList = () => {
     className='grid grid-cols-2 p-2'>
         <div className='w-full'>
             <div className='flex items-center justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-green-500' />
                 
                 <p className='text-sm'
@@ -20,7 +20,7 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-orange-400' />
 
                 <p className='text-sm'
@@ -32,7 +32,7 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-white' />
 
                 <p className='text-sm'
@@ -44,7 +44,7 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-yellow-300' />
 
                 <p className='text-sm'
@@ -56,7 +56,7 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-cyan-300' />
 
                 <p className='text-sm'
@@ -68,7 +68,7 @@ const HomeList = () => {
 
         <div className='w-full'>
             <div className='flex items-left justify-start'>
-            <div className='flex flex-row mt-5'>
+            <div className='flex flex-row mt-2'>
                 <FaCircle className='mt-1 mr-4 text-purple-400' />
 
                 <p className='text-sm'

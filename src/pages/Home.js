@@ -21,6 +21,7 @@ const Home = () => {
   const scrollRef = useRef(null);
 
   const handleBtnClick = () => {
+    console.log('button click', scrollRef.current)
     scrollRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -37,26 +38,20 @@ const Home = () => {
               <HomeList />
             </div>
 
-            <div className='flex items-center justify-center max-h-[400px]'>
-              <Graph />
+            <div className='flex items-center justify-center max-h-[450px]'>
+              <Graph 
+              handleBtnClick={handleBtnClick}
+              />
             </div>
-          </div>
-
-          <div className='flex items-center justify-center mt-10 mb-32'>
-            <button
-            type='button'
-            className='btn btn-neutral text-white'
-            onClick={handleBtnClick}
-            >Read more <FaAngleDoubleDown className='ml-2' />
-            </button>
+            
           </div>
         </div>
 
-        <div className='flex items-center justify-center'>
-          <div 
-          className='grid grid-cols-1 md:grid-cols-2 gap-4 my-20'
-          ref={scrollRef}
-          > 
+        <div 
+        className='flex items-center justify-center'
+        ref={scrollRef}
+        >
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 my-20'> 
             <HomeCard 
             SystemName={'Default Mode Network'}
             SystemImage={dmn}
