@@ -27,7 +27,7 @@ const HomeList = () => {
                 <FaCircle className='mt-1 mr-4 text-orange-400' />
 
                 <p className='text-md underline'
-                >Central Executive Network
+                >Executive Network
                 </p>
             </div>
             </div>
