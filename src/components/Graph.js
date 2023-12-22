@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ForceGraph2D } from 'react-force-graph';
 
 const graphData = {
@@ -170,6 +170,31 @@ const graphData = {
 };
 
 const Graph = () => {
+  const graphRef = useRef();
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      // prevent the default graph scroll behavior
+      event.preventDefault();
+
+      // scroll the window; adjust deltaY for sensitivity
+      window.scrollBy({ top: event.deltaY, behavior: 'smooth' });
+    };
+
+    const graphElement = graphRef.current;
+    if (graphElement) {
+      // event listener for scroll
+      graphElement.addEventListener('wheel', handleScroll);
+    }
+
+    return () => {
+      // clean up the event listener
+      if (graphElement) {
+        graphElement.removeEventListener('wheel', handleScroll);
+      }
+    };
+  }, []);
+
   const getNodeColor = (node) => {
     switch (node.group) {
       case 1:
@@ -190,15 +215,17 @@ const Graph = () => {
   };
 
   return (
-    <ForceGraph2D
-    graphData={graphData}
-    nodeLabel="name"
-    nodeColor={getNodeColor}
-    linkDirectionalArrowLength={0}
-    linkCurvature={0.25}
-    enablePanInteraction={false}
-    enableZoomInteraction={false}
-    />
+    <div ref={graphRef}>
+      <ForceGraph2D
+      graphData={graphData}
+      nodeLabel="name"
+      nodeColor={getNodeColor}
+      linkDirectionalArrowLength={0}
+      linkCurvature={0.25}
+      enablePanInteraction={false}
+      enableZoomInteraction={false}
+      />
+    </div>
   );
 };
 
