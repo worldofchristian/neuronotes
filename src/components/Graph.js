@@ -230,7 +230,7 @@ const Graph = ({ handleBtnClick }) => {
       enablePanInteraction={false}
       />
 
-      <div className='absolute bottom-[20%] left-1/2 transform -translate-x-1/2'>
+      <div className='absolute bottom-[10%] left-1/2 transform -translate-x-1/2'>
         <button
         className='btn btn-neutral text-white'
         onClick={handleBtnClick}
