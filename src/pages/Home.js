@@ -56,6 +56,7 @@ const Home = () => {
             SystemImage={dmn}
             SystemDescription={'Internal thinking, introspection, and imagination'}
             className='mr-[20%]'
+            systemLink={'/almost'}
             />
 
             <HomeCard
@@ -63,6 +64,7 @@ const Home = () => {
             SystemImage={sn}
             SystemDescription={'Prioritizing external stimuli and internal thoughts'}
             className='ml-[20%]'
+            systemLink={'/almost'}
             />
 
             <HomeCard
@@ -70,6 +72,7 @@ const Home = () => {
             SystemImage={cen}
             SystemDescription={'Problem solving, decision making, and working memory'}
             className='mr-[20%]'
+            systemLink={'/almost'}
             />
 
             <HomeCard
@@ -77,20 +80,21 @@ const Home = () => {
             SystemImage={sms}
             SystemDescription={'Processing sensory input and planning motor actions'}
             className='ml-[20%]'
+            systemLink={'/almost'}
             />
 
             <HomeCard
             SystemName={'Visual Network'}
             SystemImage={vn}
             SystemDescription={'Processing and interpreting visual input'}
-            className='mr-[20%]'
+            systemLink={'/visualnetwork'}
             />
 
             <HomeCard
             SystemName={'Auditory Network'}
             SystemImage={as}
             SystemDescription={'Processing and interpreting sound input'}
-            className='ml-[20%]'
+            systemLink={'/almost'}
             />
           </div>
         </div>

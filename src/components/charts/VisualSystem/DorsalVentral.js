@@ -61,6 +61,12 @@ const initialNodes = [
         className: 'darkNodeStyle'
       },
       {
+        id: 'ffa',
+        position: { x: 250, y: 1700 },
+        data: { label: 'FFA (Fusiform Face Area): Specialized for facial recognition.' },
+        draggable: false
+      },
+      {
         id: 'perirhinal',
         position: { x: 250, y: 1200 },
         data: { label: 'Perirhinal Cortex: Involved in object recognition and memory.' },

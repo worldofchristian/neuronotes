@@ -5,6 +5,7 @@ import VisualSystem from './pages/VisualSystem';
 import AuditorySystem from './pages/AuditorySystem'
 import HypothesisTesting from './pages/HypothesisTesting';
 import OlfactorySystem from './pages/OlfactorySystem';
+import Almost from './pages/Almost';
 
 
 const RouteSwitch = () => {
@@ -12,6 +13,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/almost' element={<Almost />} />
         <Route path='/visualnetwork' element={<VisualSystem />} />
         <Route path='/auditorynetwork' element={<AuditorySystem />} />
         <Route path='/hypothesistesting' element={<HypothesisTesting />} />

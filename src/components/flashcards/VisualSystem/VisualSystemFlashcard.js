@@ -74,7 +74,7 @@ const VisualSystemFlashcard = () => {
 
   return (
     <div 
-    className="rounded-xl bg-slate-100 shadow-md overflow-hidden w-80">
+    className="rounded-2xl bg-base-200 shadow-xl overflow-hidden w-80">
       <div 
       className="px-6 py-4 my-6 text-center">
         <h2 
@@ -109,7 +109,7 @@ const VisualSystemFlashcard = () => {
             </button>
 
             <button 
-            className="btn btn-neutral mt-2" 
+            className="btn btn-neutral text-white mt-2" 
             onClick={refreshQuestion}
             >New question</button>
           </div>

@@ -8,49 +8,57 @@ const initialNodes = [
         id: 'mst',
         position: { x: 50, y: -500 },
         data: { label: 'MST (Medial Superior Temporal area): Analyzing more complex aspects of motion, including the motion of objects relative to the background.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'ppc', 
         position: { x: 50, y: 100 },
         data: { label: 'Posterior Parietal Cortex: Involved in spatial awareness and sensory integration.' },
-        draggable: false  
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'spl',
         position: { x: 50, y: 500 },
         data: { label: 'Superior Parietal Lobule (SPL): Involved in spatial relations and coordination.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'precuneus',
         position: { x: 50, y: 700 },
         data: { label: 'Precuneus: Plays a role in episodic memory, visuospatial processing, and self-reflection.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'v4',
         position: { x: 250, y: -100 },
         data: { label: 'V4: Processes color and shape, helps in object recognition.' },
-        draggable: false
-      },
-      {
-        id: 'it',
-        position: { x: 250, y: 100 },
-        data: { label: 'IT (Inferotemporal Cortex): Involved in recognition and identification of objects.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'ffa',
         position: { x: 250, y: 500 },
         data: { label: 'FFA (Fusiform Face Area): Specialized for facial recognition.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
+      },
+      {
+        id: 'perirhinal',
+        position: { x: 250, y: -1200 },
+        data: { label: 'Perirhinal Cortex: Involved in object recognition and memory.' },
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'ppa',
         position: { x: 250, y: 700 },
         data: { label: 'PPA (Parahippocampal Place Area): Involved in recognizing places and scenes.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       }
 ];
 
@@ -63,7 +71,8 @@ const initialEdges = [
     { id: 'e13-15', source: 'it', target: 'ffa', animated: true },
     { id: 'e9-10', source: 'v4', target: 'it', animated: true },
     { id: 'e14-15', source: 'spl', target: 'precuneus', animated: true },
-    { id: 'e12-1302', source: 'ffa', target: 'ppa', animated: true }
+    { id: 'e12-1302', source: 'ffa', target: 'ppa', animated: true },
+    { id: 'e12-1303', source: 'perirhinal', target: 'ffa', animated: true }
 ];
 
 const defaultViewport = { x: -50, y: -50, zoom: 1 };
