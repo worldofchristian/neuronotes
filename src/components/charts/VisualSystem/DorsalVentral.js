@@ -20,22 +20,29 @@ const initialNodes = [
       },
       {
         id: 'mt',
-        position: { x: 50, y: 770 },
+        position: { x: 50, y: 700 },
         data: { label: 'MT (Middle Temporal area): Processing motion, perceiving the speed and direction of moving objects.' },
         draggable: false,
         className: 'darkNodeStyle'
       },
       {
         id: 'mst',
-        position: { x: 50, y: 1000 },
+        position: { x: 50, y: 950 },
         data: { label: 'MST (Medial Superior Temporal area): Analyzing more complex aspects of motion, including the motion of objects relative to the background.' },
         draggable: false,
         className: 'darkNodeStyle'
       },
       {
         id: 'ppc', 
-        position: { x: 50, y: 1700 },
+        position: { x: 50, y: 1250 },
         data: { label: 'Posterior Parietal Cortex: Involved in spatial awareness and sensory integration.' },
+        draggable: false,
+        className: 'darkNodeStyle'
+      },
+      {
+        id: 'spl',
+        position: { x: 50, y: 1500 },
+        data: { label: 'Superior Parietal Lobule (SPL): Involved in spatial relations and coordination.' },
         draggable: false,
         className: 'darkNodeStyle'
       },
@@ -55,20 +62,21 @@ const initialNodes = [
       },
       {
         id: 'it',
-        position: { x: 250, y: 770 },
+        position: { x: 250, y: 800 },
         data: { label: 'IT (Inferotemporal Cortex): Involved in recognition and identification of objects.' },
         draggable: false,
         className: 'darkNodeStyle'
       },
       {
         id: 'ffa',
-        position: { x: 250, y: 1700 },
+        position: { x: 250, y: 1500 },
         data: { label: 'FFA (Fusiform Face Area): Specialized for facial recognition.' },
-        draggable: false
+        draggable: false,
+        className: 'darkNodeStyle'
       },
       {
         id: 'perirhinal',
-        position: { x: 250, y: 1200 },
+        position: { x: 250, y: 1250 },
         data: { label: 'Perirhinal Cortex: Involved in object recognition and memory.' },
         draggable: false,
         className: 'darkNodeStyle'
@@ -90,6 +98,7 @@ const initialEdges = [
     { id: 'e14-15', source: 'spl', target: 'precuneus', animated: true },
     { id: 'e10-1201', source: 'it', target: 'perirhinal', animated: true },
     { id: 'e10-1202', source: 'perirhinal', target: 'ffa', animated: true },
+    { id: 'e14-14', source: 'ppc', target: 'spl', animated: true },
 ];
 
 const defaultViewport = { x: -50, y: -50, zoom: 1 };
@@ -97,7 +106,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 const DorsalVentral = () => {
   return (
     <div 
-    style={{ height: '1400px', width: '350px', pointerEvents: 'none' }}
+    style={{ height: '1700px', width: '350px', pointerEvents: 'none' }}
     >   
         <ReactFlow 
         nodes={initialNodes} 

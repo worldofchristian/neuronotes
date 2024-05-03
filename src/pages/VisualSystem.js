@@ -1,12 +1,17 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import RetinatoV2 from '../components/charts/VisualSystem/Retina-V2';
 import DorsalVentral from '../components/charts/VisualSystem/DorsalVentral';
-import FFA from '../components/charts/VisualSystem/FFA';
 import VisualSystemFlashcard from '../components/flashcards/VisualSystem/VisualSystemFlashcard';
-import Navbar from '../components/Navbar';
+import { FaCircle, FaMinus, FaPlus } from 'react-icons/fa';
 
-const VisualSystem = ({ defaultPosition }) => {
+const VisualSystem = () => {
+  const [isLight, setIsLight] = useState(false);
+  const [isEye, setIsEye] = useState(false);
+  const [isVP, setIsVP] = useState(false);
+  const [isOR, setIsOR] = useState(false);
+  const [isCP, setIsCP] = useState(false);
+  const [isDP, setIsDP] = useState(false);
+
   // load to the top of the page
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,24 +19,32 @@ const VisualSystem = ({ defaultPosition }) => {
 
   return (
     <>
-    <Navbar />
+    <div className='flex items-center justify-center bg-base-100'>
+      <div className='max-w-[370px] lg:max-w-4xl'>
+          <div className='flex-col mt-5 mb-16'>    
+            <div className='flex flex-row items-center justify-center'>
+              <FaCircle className='text-xl mt-2 mr-3 text-green-500' />
 
-    <div
-    className='flex items-center justify-center bg-base-100'>
-      <div
-      className='max-w-sm lg:max-w-4xl'>
-          <div
-          className='flex-col my-16'>             
-            <h1
-            className='text-3xl font-bold mt-2 text-center tracking-wide'
-            >Visual System</h1>
+              <h1 className='text-3xl font-bold mt-2 text-center tracking-wide'
+              >Visual System
+              </h1>
+            </div>
 
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >Light</h2>
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >Light
+              </h2>
 
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsLight(!isLight)}
+              >{isLight ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
+            </div>
+
+            {isLight &&
+            <>            
+            <p className='text-base text-left justify-start items-start mt-2'
             >Light is a narrow portion of the electromagnetic spectrum. Humans can see light with wavelengths 
             between 400 and 800 nm. Different animals can see different portions of the spectrum. For example, 
             bees can see ultraviolet waves (100nm-400nm) which helps them with pollination. Mantis shrimp can 
@@ -39,14 +52,29 @@ const VisualSystem = ({ defaultPosition }) => {
             They can do this because their eyes contain more types of photoreceptors, anywhere from 12 to 16 
             compared to the 4 that are found in humans. When light hits an object, it appears a certain color 
             because the object absorbs all visible waves except that particular color. That color is reflected 
-            off the object and is then able to be picked up by the photoreceptors in our eyes.</p>
-            
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >The Eye</h2>
+            off the object and is then able to be picked up by the photoreceptors in our eyes.
+            </p></>}
 
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+            <div
+            className='flex items-center justify-center my-5'>
+              <RetinatoV2 />
+            </div>
+            
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >The Eye
+              </h2>
+
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsEye(!isEye)}
+              >{isEye ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
+            </div>
+            
+            {isEye &&
+            <>
+            <p className='text-base text-left justify-start items-start mt-2'
             >Light passes through a transparent window called the cornea, and into the pupil. The iris is the colored 
             part of the eye that controls how much light can enter by expanding or contracting the pupil. From there, 
             it is focused onto the back of the eye by the lens. The retina is found at the back of the eye and holds the 
@@ -60,14 +88,24 @@ const VisualSystem = ({ defaultPosition }) => {
             Ganglion cells connect on one side to bipolar cells, and on the other they have axons that leave the eye. Bipolar cells 
             transmit signals between the ganglion cells and the photoreceptors. Often referred to as rods and cones, these neurons are 
             responsible for vision. Rods handle low light levels, while cones handle high light levels and sense color. For example, the 
-            presence of light in the eyes is known to suppress melatonin. This explains why we prefer to sleep in darkness.</p>
+            presence of light in the eyes is known to suppress melatonin. This explains why we prefer to sleep in darkness.
+            </p></>}
 
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >Visual Pathways</h2>
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >Visual Pathways
+              </h2>
 
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsVP(!isVP)}
+              >{isVP ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
+            </div>
+            
+            {isVP &&
+            <>
+            <p className='text-base text-left justify-start items-start mt-2'
             >Once light has entered the eye, the visual input travels along the optic nerve to be interpreted by the brain. The input goes 
             to the middle of the brain, reaching the lateral geniculate nuclei in the thalamus. These are found on each hemisphere of the brain 
             and act as a relay station between the retina and the visual cortex. This is known as the retinal-geniculate-striate pathway.<br /><br />
@@ -75,33 +113,31 @@ const VisualSystem = ({ defaultPosition }) => {
             From there, the input travels to a number of areas in the visual cortex located at the posterior (back) of the brain. Together, 
             these areas are responsible for the full representation of our visual field. This takes about 200ms, which is long enough to create a 
             lag between what happens in the world and when we perceive it. Because of this, the brain continuously predicts what will happen 200ms 
-            from the present moment. </p>
+            from the present moment.
+            </p></>}
 
-            <div
-            className='flex items-center justify-center my-12'>
-              <RetinatoV2 />
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >Object Recognition
+              </h2>
+
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsOR(!isOR)}
+              >{isOR ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
             </div>
-
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >Object Recognition
-            </h2>
-
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+            
+            {isOR &&
+            <>
+            <p className='text-base text-left justify-start items-start mt-2'
             >Beyond the striate cortex (V1) is the etraxstriate cortex. This area handles the more complicated parts of visual processing. Within this 
             cortex the visual input forks into two streams, dorsal and ventral. The dorsal stream is known as the “where” pathway, it deals with the locations 
             of objects and how to interact with them. The ventral stream is called the “what” pathway, it handles the names and functions of objects. It’s worth 
             stating that these “what” and “where” titles are not exactly set in stone. Some “what” information can be encoded in “where” regions, and vice versa.<br /><br />
             </p>
-
-            <div
-            className='flex items-center justify-center my-12'>
-              <DorsalVentral />
-            </div>
-
-            <p
-            className='text-base text-left justify-start items-start mt-2'>
+            
+            <p className='text-base text-left justify-start items-start mt-2'>
             However, these regions do work together to generate an image of the world around us. Damage to any of these areas can cause major alterations to how 
             we perceive our surroundings. Take the inferotemporal cortex for instance. This is a piece of the temporal lobe that belongs to the “what” (ventral) pathway, 
             damage to this region leads to Agnosia, a lack of ability to recognize objects, despite the ability to see them.<br /><br />
@@ -112,18 +148,28 @@ const VisualSystem = ({ defaultPosition }) => {
             
             Sometimes the Fusiform face area can become active when no actual face is present. This is called Pareidolia, a phenomenon where we perceive a face where there is no actual face.
             </p>
+            </>}
 
             <div
             className='flex items-center justify-center my-12'>
-              <FFA />
-            </div>
+              <DorsalVentral />
+            </div>      
             
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >Color Perception</h2>
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >Color Perception
+              </h2>
 
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsCP(!isCP)}
+              >{isCP ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
+            </div> 
+            
+            {isCP &&
+            <>
+            <p className='text-base text-left justify-start items-start mt-2'
             >There are 3 steps to the perception of color:<br /><br />
 
             1) Detection<br />
@@ -143,23 +189,34 @@ const VisualSystem = ({ defaultPosition }) => {
             Within the visual cortex, color processing occurs primarily within V4. Damage to this area leads to a condition called achromatopsia, the loss of color vision. 
             Color-anomalous individuals can still make discriminations based on wavelength, they just differ from how the majority of people are able to. There are several 
             types of color blindness, ranging from the inability to see certain colors, to the inability to see any at all. The type of color blindness is correlated with 
-            the absence of it’s corresponding cone type in the retina.</p>
+            the absence of it’s corresponding cone type in the retina.
+            </p></>}
 
             <div
             className='flex items-center justify-center my-12'>
               <VisualSystemFlashcard />
             </div>
             
-            <h2
-            className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-6'
-            >Depth Perception</h2>
+            <div className='flex flex-row items-center justify-center gap-5 mt-10'>
+              <h2 className='text-2xl text-left font-semibold tracking-wide'
+              >Depth Perception
+              </h2>
 
-            <p
-            className='text-base text-left justify-start items-start mt-2'
+              <button 
+              className='btn btn-outline btn-sm rounded-full'
+              onClick={() => setIsDP(!isDP)}
+              >{isDP ? <>Collapse<FaMinus className='ml-2' /></> : <>Expand<FaPlus className='ml-2' /></>}
+              </button>
+            </div>
+            
+            {isDP &&
+            <>
+            <p className='text-base text-left justify-start items-start mt-2'
             >Depth perception is an important part of how we’re able to make sense of the world around us. 
             After the retinal image is created, the brain has to interpret where exactly the objects in the 
             image are located in 3 dimensional space. This is done through a variety of cues, some of which 
-            only require the use of one eye (monocular), while others require two (binocular).</p>
+            only require the use of one eye (monocular), while others require two (binocular).
+            </p></>}
 
             <h2
             className='text-lg text-left justify-start items-start font-semibold tracking-wide mt-8'

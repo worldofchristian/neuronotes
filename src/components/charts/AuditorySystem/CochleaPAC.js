@@ -1,44 +1,42 @@
 import React from 'react';
 import ReactFlow, { Background } from 'reactflow';
+import '../CustomNode.css';
 import 'reactflow/dist/style.css';
-import '../CustomNode.css'
 
 const initialNodes = [
   {
-    id: 'retina',
+    id: 'cochlea',
     position: { x: 150, y: 100 },
-    data: { label: 'Retina: Captures light and converts it into electrical signals.' },
+    data: { label: 'Cochlea: Converts sound vibrations into electrical signals.' },
     draggable: false,
     className: 'darkNodeStyle'
   },
   {
-    id: 'lgn',
-    position: { x: 150, y: 250 },
-    data: { label: 'LGN (Lateral Geniculate Nucleus): Acts as a relay station, sending signals to V1.' },
+    id: 'an',
+    position: { x: 150, y: 300 },
+    data: { label: 'Auditory Nerve: Transmits electrical signals to the brain.' },
     draggable: false,
-    className: 'darkNodeStyle'
+    className: 'darkNodeStyle'  
   },
   {
-    id: 'v1',
+    id: 'ac',
     position: { x: 150, y: 450 },
-    data: { label: 'V1: Responsible for edge detection, basic shapes, and some color processing.' },
+    data: { label: 'Primary Auditory Cortex: Initial processing of auditory information, analyzing basic features such as pitch and volume.' },
     draggable: false,
     className: 'darkNodeStyle'
   },
 ];
 
 const initialEdges = [
-  { id: 'e1-2', source: 'retina', target: 'lgn', animated: true },
-  { id: 'e2-3', source: 'lgn', target: 'v1', animated: true },
+  { id: 'e1-2', source: 'cochlea', target: 'an', animated: true },
+  { id: 'e2-3', source: 'an', target: 'ac', animated: true },
 ];
 
 const defaultViewport = { x: -50, y: -50, zoom: 1 };
 
-const RetinatoV2 = () => {
+const CochleaPAC = () => {
   return (
-    <div 
-    style={{ height: '600px', width: '350px', pointerEvents: 'none' }}
-    >   
+    <div style={{ width: '350px', height: '600px' }}>   
         <ReactFlow 
         nodes={initialNodes} 
         edges={initialEdges}
@@ -46,6 +44,7 @@ const RetinatoV2 = () => {
         elementsSelectable={false}
         zoomOnScroll={false}
         zoomOnPinch={false}
+        panOnScroll={false}
         >
         <Background 
         variant="dots" 
@@ -57,4 +56,4 @@ const RetinatoV2 = () => {
   );
 };
 
-export default RetinatoV2;
+export default CochleaPAC;

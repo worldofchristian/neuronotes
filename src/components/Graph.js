@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { ForceGraph2D } from 'react-force-graph';
-import { FaAngleDoubleDown } from 'react-icons/fa';
 
 const graphData = {
   nodes: [
@@ -170,32 +169,7 @@ const graphData = {
   ]
 };
 
-const Graph = ({ handleBtnClick }) => {
-  const graphRef = useRef();
-
-  useEffect(() => {
-    const handleScroll = (event) => {
-      // prevent the default graph scroll behavior
-      event.preventDefault();
-
-      // scroll the window; adjust deltaY for sensitivity
-      window.scrollBy({ top: event.deltaY, behavior: 'smooth' });
-    };
-
-    const graphElement = graphRef.current;
-    if (graphElement) {
-      // event listener for scroll
-      graphElement.addEventListener('wheel', handleScroll);
-    }
-
-    return () => {
-      // clean up the event listener
-      if (graphElement) {
-        graphElement.removeEventListener('wheel', handleScroll);
-      }
-    };
-  }, []);
-
+const Graph = () => {
   const getNodeColor = (node) => {
     switch (node.group) {
       case 1:
@@ -216,27 +190,17 @@ const Graph = ({ handleBtnClick }) => {
   };
 
   return (
-    <div 
-    className='flex-col'
-    ref={graphRef}
-    >
+    <div className='flex-col overflow-hidden' style={{ transform: "scale(0.7)" }}>
       <ForceGraph2D
       graphData={graphData}
       nodeLabel="name"
-      nodeVal={2.5}
+      nodeVal={3}
       nodeColor={getNodeColor}
       linkDirectionalArrowLength={0}
       linkCurvature={0.25}
       enablePanInteraction={false}
+      enableZoomInteraction={false}
       />
-
-      <div className='absolute bottom-[10%] left-1/2 transform -translate-x-1/2'>
-        <button
-        className='btn btn-neutral text-white'
-        onClick={handleBtnClick}
-        >Read more<FaAngleDoubleDown className='ml-2 text-white' />
-        </button>
-      </div>
     </div>
   );
 };
