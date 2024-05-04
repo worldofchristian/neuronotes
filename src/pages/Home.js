@@ -43,7 +43,7 @@ const Home = () => {
             <div className='flex flex-col items-center mb-20'>
               <h1 className='text-3xl font-bold mt-10 text-center'>Under construction</h1>
 
-              <img src={dog} alt='under construction dog' className='rounded-2xl w-4/6 mt-5' />
+              <img src={dog} alt='under construction' className='rounded-2xl w-4/6 mt-5' />
             </div>
             </>}
             {activeTab === 'executive' &&
@@ -51,7 +51,7 @@ const Home = () => {
             <div className='flex flex-col items-center mb-20'>
               <h1 className='text-3xl font-bold mt-10 text-center'>Under construction</h1>
 
-              <img src={dog} alt='under construction dog' className='rounded-2xl w-4/6 mt-5' />
+              <img src={dog} alt='under construction' className='rounded-2xl w-4/6 mt-5' />
             </div>
             </>}
             {activeTab === 'defaultmode' &&
@@ -59,7 +59,7 @@ const Home = () => {
             <div className='flex flex-col items-center mb-20'>
               <h1 className='text-3xl font-bold mt-10 text-center'>Under construction</h1>
 
-              <img src={dog} alt='under construction dog' className='rounded-2xl w-4/6 mt-5' />
+              <img src={dog} alt='under construction' className='rounded-2xl w-4/6 mt-5' />
             </div>
             </>}
             {activeTab === 'salience' &&
@@ -67,7 +67,7 @@ const Home = () => {
             <div className='flex flex-col items-center mb-20'>
               <h1 className='text-3xl font-bold mt-10 text-center'>Under construction</h1>
 
-              <img src={dog} alt='under construction dog' className='rounded-2xl w-4/6 mt-5' />
+              <img src={dog} alt='under construction' className='rounded-2xl w-4/6 mt-5' />
             </div>
             </>}
           </div>
