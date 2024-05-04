@@ -36,7 +36,7 @@ const defaultViewport = { x: -50, y: -50, zoom: 1 };
 
 const CochleaPAC = () => {
   return (
-    <div style={{ width: '350px', height: '600px' }}>   
+    <div style={{ width: '350px', height: '600px', pointerEvents: 'none' }}>   
         <ReactFlow 
         nodes={initialNodes} 
         edges={initialEdges}
