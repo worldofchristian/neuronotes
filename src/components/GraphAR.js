@@ -183,7 +183,7 @@ const NodeColor = {
 
 const GraphAR = () => {
   const fgRef = useRef();
-  const { gl, scene, camera } = useThree();
+  const { gl, camera } = useThree();
 
   useEffect(() => {
     if (fgRef.current) {
