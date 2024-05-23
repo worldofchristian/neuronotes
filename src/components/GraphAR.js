@@ -181,7 +181,7 @@ const NodeColor = {
   6: 'violet',
 };
 
-const GraphAR = () => {
+const Graph = () => {
   const fgRef = useRef();
   const { gl, camera } = useThree();
 
@@ -208,22 +208,28 @@ const GraphAR = () => {
   }, [gl, camera]);
 
   return (
-    <Canvas vr>
+    <primitive
+      object={
+        new ForceGraph3D()
+          .graphData(graphData)
+          .nodeAutoColorBy('group')
+          .nodeColor(node => NodeColor[node.group])
+          .linkColor(() => 'pink')
+          .linkDirectionalParticles(2)
+          .linkDirectionalParticleWidth(0.5)
+          .linkCurvature(0.25)  // Corrected syntax
+      }
+      ref={fgRef}
+    />
+  );
+};
+
+const GraphAR = () => {
+  return (
+    <Canvas vr="true">
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <primitive
-        object={
-          new ForceGraph3D()
-            .graphData(graphData)
-            .nodeAutoColorBy('group')
-            .nodeColor(node => NodeColor[node.group])
-            .linkColor(() => 'pink')
-            .linkDirectionalParticles(2)
-            .linkDirectionalParticleWidth(0.5)
-            .linkCurvature=(0.25)
-        }
-        ref={fgRef}
-      />
+      <Graph />
     </Canvas>
   );
 };
