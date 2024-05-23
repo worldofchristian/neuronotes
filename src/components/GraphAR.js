@@ -1,7 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, extend, useThree } from '@react-three/fiber';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { VRButton } from 'three/examples/jsm/webxr/VRButton';
 import ForceGraph3D from 'three-forcegraph';
+
+extend({ OrbitControls });
 
 const graphData = {
   nodes: [
@@ -180,29 +183,46 @@ const NodeColor = {
 
 const GraphAR = () => {
   const fgRef = useRef();
+  const { gl, scene, camera } = useThree();
 
   useEffect(() => {
     if (fgRef.current) {
       fgRef.current.d3Force('charge').strength(-120);
     }
 
-    document.body.appendChild(VRButton.createButton(fgRef.current));
-    fgRef.current.xr.enabled = true;
-  }, []);
+    // Add the VRButton to the document
+    document.body.appendChild(VRButton.createButton(gl));
+    gl.xr.enabled = true;
+
+    // Add OrbitControls for better interaction in VR
+    const controls = new OrbitControls(camera, gl.domElement);
+    controls.minDistance = 1;
+    controls.maxDistance = 100;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.1;
+    controls.rotateSpeed = 0.5;
+
+    return () => {
+      controls.dispose();
+    };
+  }, [gl, camera]);
 
   return (
     <Canvas vr>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <ForceGraph3D
+      <primitive
+        object={
+          new ForceGraph3D()
+            .graphData(graphData)
+            .nodeAutoColorBy('group')
+            .nodeColor(node => NodeColor[node.group])
+            .linkColor(() => 'pink')
+            .linkDirectionalParticles(2)
+            .linkDirectionalParticleWidth(0.5)
+            .linkCurvature=(0.25)
+        }
         ref={fgRef}
-        graphData={graphData}
-        nodeAutoColorBy="group"
-        nodeColor={node => NodeColor[node.group]}
-        linkColor={() => 'pink'}
-        linkDirectionalParticles={2}
-        linkDirectionalParticleWidth={0.5}
-        linkCurvature={0.25}
       />
     </Canvas>
   );
