@@ -6,13 +6,14 @@ import AuditorySystem from './pages/AuditorySystem'
 import HypothesisTesting from './pages/HypothesisTesting';
 import OlfactorySystem from './pages/OlfactorySystem';
 import Almost from './pages/Almost';
-
+import GraphAR from './components/GraphAR';
 
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/ar' element={<GraphAR />} />
         <Route path='/almost' element={<Almost />} />
         <Route path='/visualnetwork' element={<VisualSystem />} />
         <Route path='/auditorynetwork' element={<AuditorySystem />} />
