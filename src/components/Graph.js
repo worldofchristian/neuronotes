@@ -188,6 +188,7 @@ const Graph = () => {
         return 'gray'; 
     }
   };
+  
 
   return (
     <div className='flex-col overflow-hidden' style={{ transform: "scale(0.7)" }}>
