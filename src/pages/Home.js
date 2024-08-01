@@ -218,27 +218,27 @@ const graphData = {
     { source: 'nodeLPFC', target: 'nodeAI', color: 'pink', group: 6 },
   
     // WMN-Visual connections
-    { source: 'nodeLPFC', target: 'node8', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'node8', color: 'pink', group: 4 },
   
     // WMN-Auditory connection
-    { source: 'nodeLPFC', target: 'node16', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'node16', color: 'pink', group: 4 },
   
     // WMN-Motor connection
-    { source: 'nodeLPFC', target: 'nodeM1', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'nodeM1', color: 'pink', group: 4 },
   
     // WMN-CEN connections
-    { source: 'nodeLPFC', target: 'nodeDorsalDLPFC', color: 'pink', group: 7 },
-    { source: 'nodeLPFC', target: 'nodeACC', color: 'pink', group: 7 },
-    { source: 'nodeLPFC', target: 'nodeTPJ', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'nodeDorsalDLPFC', color: 'pink', group: 4 },
+    { source: 'nodeLPFC', target: 'nodeACC', color: 'pink', group: 4 },
+    { source: 'nodeLPFC', target: 'nodeTPJ', color: 'pink', group: 4 },
   
     // WMN-SN connections
-    { source: 'nodeLPFC', target: 'nodeAI', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'nodeAI', color: 'pink', group: 4 },
   
     // WMN-DMN connections
-    { source: 'nodeLPFC', target: 'nodePCC', color: 'pink', group: 7 },
-    { source: 'nodeLPFC', target: 'nodeHF', color: 'pink', group: 7 },
-    { source: 'nodeLPFC', target: 'nodeIPL', color: 'pink', group: 7 },
-    { source: 'nodeLPFC', target: 'nodeLTC', color: 'pink', group: 7 },
+    { source: 'nodeLPFC', target: 'nodePCC', color: 'pink', group: 4 },
+    { source: 'nodeLPFC', target: 'nodeHF', color: 'pink', group: 4 },
+    { source: 'nodeLPFC', target: 'nodeIPL', color: 'pink', group: 4 },
+    { source: 'nodeLPFC', target: 'nodeLTC', color: 'pink', group: 4 },
   
     // CEN-WMN connections
     { source: 'nodeACC', target: 'nodeLPFC', color: 'pink', group: 4 },
@@ -293,6 +293,7 @@ const Home = () => {
     if (activeTab === 'executive') return node.group === 4 || referencedNodeIds.has(node.id);
     if (activeTab === 'salience') return node.group === 5 || referencedNodeIds.has(node.id);
     if (activeTab === 'defaultmode') return node.group === 6 || referencedNodeIds.has(node.id);
+    if (activeTab === 'all') return node.group === 1,2,3,4,5,6 || referencedNodeIds.has(node.id);
     return false;
   });
 
@@ -303,6 +304,7 @@ const Home = () => {
     if (activeTab === 'executive') return link.group === 4;
     if (activeTab === 'salience') return link.group === 5;
     if (activeTab === 'defaultmode') return link.group === 6;
+    if (activeTab === 'all') return link.group === 1,2,3,4,5,6;
     return false;
   });
 
@@ -314,7 +316,7 @@ const Home = () => {
     <div className='bg-base max-w-6xl'>
       <div className='min-h-screen'>
         <div className='flex flex-col items-center'>
-          <div className='flex items-center justify-center max-h-[300px]' style={{ transform: "scale(0.8)" }}>
+          <div className='flex items-center justify-center max-h-[300px]' style={{ transform: "scale(0.7)" }}>
             <ForceGraph2D
             graphData={{ nodes: filteredNodes, links: filteredLinks }}
             nodeLabel="name"
